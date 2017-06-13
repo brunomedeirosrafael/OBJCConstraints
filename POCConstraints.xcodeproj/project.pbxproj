@@ -13,6 +13,8 @@
 		6B41D1B41EEF698000265AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B41D1B21EEF698000265AC6 /* Main.storyboard */; };
 		6B41D1B61EEF698000265AC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B41D1B51EEF698000265AC6 /* Assets.xcassets */; };
 		6B41D1B91EEF698000265AC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B41D1B71EEF698000265AC6 /* LaunchScreen.storyboard */; };
+		6B41D1C11EEF7C6800265AC6 /* textView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B41D1C01EEF7C6800265AC6 /* textView.xib */; };
+		6B41D1C41EEF7D5B00265AC6 /* TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B41D1C31EEF7D5B00265AC6 /* TextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		6B41D1B51EEF698000265AC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B41D1B81EEF698000265AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B41D1BA1EEF698000265AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B41D1C01EEF7C6800265AC6 /* textView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = textView.xib; sourceTree = "<group>"; };
+		6B41D1C21EEF7D5B00265AC6 /* TextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextView.h; sourceTree = "<group>"; };
+		6B41D1C31EEF7D5B00265AC6 /* TextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,9 @@
 		6B41D1A81EEF698000265AC6 /* POCConstraints */ = {
 			isa = PBXGroup;
 			children = (
+				6B41D1C21EEF7D5B00265AC6 /* TextView.h */,
+				6B41D1C31EEF7D5B00265AC6 /* TextView.m */,
+				6B41D1C01EEF7C6800265AC6 /* textView.xib */,
 				6B41D1AC1EEF698000265AC6 /* AppDelegate.h */,
 				6B41D1AD1EEF698000265AC6 /* AppDelegate.m */,
 				6B41D1AF1EEF698000265AC6 /* ViewController.h */,
@@ -137,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B41D1B91EEF698000265AC6 /* LaunchScreen.storyboard in Resources */,
+				6B41D1C11EEF7C6800265AC6 /* textView.xib in Resources */,
 				6B41D1B61EEF698000265AC6 /* Assets.xcassets in Resources */,
 				6B41D1B41EEF698000265AC6 /* Main.storyboard in Resources */,
 			);
@@ -150,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B41D1B11EEF698000265AC6 /* ViewController.m in Sources */,
+				6B41D1C41EEF7D5B00265AC6 /* TextView.m in Sources */,
 				6B41D1AE1EEF698000265AC6 /* AppDelegate.m in Sources */,
 				6B41D1AB1EEF698000265AC6 /* main.m in Sources */,
 			);

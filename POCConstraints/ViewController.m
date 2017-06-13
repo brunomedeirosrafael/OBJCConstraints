@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "TextView.h"
 @interface ViewController ()
 
 @end
@@ -19,7 +19,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //[self createCenterView];
-    [self createMarginView];
+    //[self createMarginView];
+    
+    [self createXIBView];
 }
 
 -(void)createCenterView {
@@ -64,6 +66,27 @@
     [self.view addConstraints:constraints];
     
     [self.view layoutIfNeeded];
+}
+
+- (void)createXIBView {
+    TextView *view = [[TextView alloc] init];
+    [view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    view.label.text = @"Oi, eu sou o Goku!!!!";
+    
+    [self.view addSubview:view];
+    
+    //NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:100];
+    
+    NSLayoutConstraint *topMargin = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1 constant:50];
+    
+    NSLayoutConstraint *leftMargin = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:50];
+    NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:100];
+    
+    NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:20];
+    
+    NSArray *constraints = @[topMargin, leftMargin, height, width];
+    [self.view addConstraints:constraints];
+    
 }
 
 @end
