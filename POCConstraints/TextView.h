@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TextView : UIView
-
 @property (weak, nonatomic) IBOutlet UILabel *label;
+
+- (void)creteViewFull:(UIView *)parent;
 @end

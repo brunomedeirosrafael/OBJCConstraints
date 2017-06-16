@@ -26,5 +26,71 @@
     return self;
 }
 
+- (void)creteViewFull:(UIView *)parent {
+    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeLeading
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:parent
+                                                               attribute:NSLayoutAttributeLeading
+                                                              multiplier:1
+                                                                constant:0];
+    NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:self
+                                                                attribute:NSLayoutAttributeTrailing
+                                                                relatedBy:NSLayoutRelationEqual
+                                                                   toItem:parent
+                                                                attribute:NSLayoutAttributeTrailing
+                                                               multiplier:1
+                                                                 constant:0];
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self
+                                                           attribute:NSLayoutAttributeTop
+                                                           relatedBy:NSLayoutRelationEqual
+                                                              toItem:parent
+                                                           attribute:NSLayoutAttributeTop
+                                                          multiplier:1
+                                                            constant:16];
+    NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self
+                                                              attribute:NSLayoutAttributeBottomMargin
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:parent
+                                                              attribute:NSLayoutAttributeBottomMargin
+                                                             multiplier:1
+                                                               constant:8];
+    NSLayoutConstraint *x = [NSLayoutConstraint constraintWithItem:self
+                                                         attribute:NSLayoutAttributeCenterX
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:parent
+                                                         attribute:NSLayoutAttributeCenterX
+                                                        multiplier:1
+                                                          constant:0];
+    
+    NSLayoutConstraint *y = [NSLayoutConstraint constraintWithItem:self
+                                                         attribute:NSLayoutAttributeCenterY
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:parent
+                                                         attribute:NSLayoutAttributeCenterY
+                                                        multiplier:1
+                                                          constant:0];
+    
+    NSLayoutConstraint *width = [NSLayoutConstraint constraintWithItem:self
+                                                             attribute:NSLayoutAttributeWidth
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:nil
+                                                             attribute:NSLayoutAttributeNotAnAttribute
+                                                            multiplier:1
+                                                              constant:100];
+    
+    NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:self
+                                                              attribute:NSLayoutAttributeHeight
+                                                              relatedBy:NSLayoutRelationGreaterThanOrEqual
+                                                                 toItem:nil
+                                                              attribute:NSLayoutAttributeNotAnAttribute
+                                                             multiplier:1
+                                                               constant:20];
+    
+    NSArray *constraints = @[trailing, leading, height, top];
+    [parent addConstraints:constraints];
+
+}
+
 
 @end
